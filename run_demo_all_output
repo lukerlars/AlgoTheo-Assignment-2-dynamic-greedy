@@ -1,0 +1,167 @@
+    Finished dev [unoptimized + debuginfo] target(s) in 0.19s
+     Running `target/debug/dynamicprogramming`
+Min number of computations with optimal parenthesization: 192
+ And that paranthesization is: ((A0(A1(A2A3)))A4)Running time: 57.542µs
+
+ Generated discrete knapsack problem, Valuable items :
+ValuableItem { id: 0, size: 7, value: 8 }
+Found solution to knapsack problem :
+Knapsack { size_left: 7, items: [0], total_value: 8 }
+Runtime 24.959µs
+
+ Generated liquid knapsack problem:
+ValuableLiquid { volume: 9.961758, value: 3.0373144 }
+ValuableLiquid { volume: 5.9343386, value: 3.0842853 }
+ValuableLiquid { volume: 8.452004, value: 1.4497685 }
+ValuableLiquid { volume: 1.5691864, value: 3.6398435 }
+ValuableLiquid { volume: 2.062571, value: 9.959448 }
+ValuableLiquid { volume: 5.705762, value: 5.0234866 }
+ValuableLiquid { volume: 3.6706448, value: 7.0563674 }
+ValuableLiquid { volume: 8.4596405, value: 4.2954373 }
+Found solution
+Knapsack size 6, size of yield 6, total value 18.151949
+Duation 2.708µs
+
+ Greedy coin sum solver demo
+found solution for target sum 99, using coins [10, 5, 3, 1], with a greedy approach:
+coin value: 10, counts: 9
+coin value: 5, counts: 1
+coin value: 3, counts: 1
+coin value: 1, counts: 1
+Duration 1.875µs
+
+ Demo coin sum minimzer top down appoach
+Found solution to sum target 15, with coins [20, 10, 5, 1]
+Found the best coin pouch to be CoinPouch { value: 15, count: 2, coin_stacks: [CoinStack { coin: 10, count: 1 }, CoinStack { coin: 5, count: 1 }] }
+
+ Demo dynamic coin solver
+find optimal sum of value 15, using coins: [1, 5, 11]
+Found solution CoinSum { val: 15, coins: [CoinStack { coin: 5, count: 3 }] }
+Duration 28.666µs
+Test, norwegian coins: [20, 10, 5, 1]
+Value 127, found sum CoinSum { val: 127, coins: [CoinStack { coin: 1, count: 2 }, CoinStack { coin: 5, count: 1 }, CoinStack { coin: 20, count: 6 }] }
+Time elapsed 159.833µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 248
+Greedy approach results:
+CoinStack { coin: 20, count: 12 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 3 }
+Elapsed time 6.541µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 12 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 3 }
+Time elapsed 310.709µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 244
+Greedy approach results:
+CoinStack { coin: 20, count: 12 }
+CoinStack { coin: 1, count: 4 }
+Elapsed time 5.708µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 12 }
+CoinStack { coin: 1, count: 4 }
+Time elapsed 311.833µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 125
+Greedy approach results:
+CoinStack { coin: 20, count: 6 }
+CoinStack { coin: 5, count: 1 }
+Elapsed time 4.833µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 6 }
+CoinStack { coin: 5, count: 1 }
+Time elapsed 152.25µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 284
+Greedy approach results:
+CoinStack { coin: 20, count: 14 }
+CoinStack { coin: 1, count: 4 }
+Elapsed time 5.5µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 14 }
+CoinStack { coin: 1, count: 4 }
+Time elapsed 436.584µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 203
+Greedy approach results:
+CoinStack { coin: 20, count: 10 }
+CoinStack { coin: 1, count: 3 }
+Elapsed time 5.208µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 10 }
+CoinStack { coin: 1, count: 3 }
+Time elapsed 270.917µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 291
+Greedy approach results:
+CoinStack { coin: 20, count: 14 }
+CoinStack { coin: 10, count: 1 }
+CoinStack { coin: 1, count: 1 }
+Elapsed time 5.083µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 14 }
+CoinStack { coin: 10, count: 1 }
+CoinStack { coin: 1, count: 1 }
+Time elapsed 427.042µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 87
+Greedy approach results:
+CoinStack { coin: 20, count: 4 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 2 }
+Elapsed time 4.833µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 4 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 2 }
+Time elapsed 120.75µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 167
+Greedy approach results:
+CoinStack { coin: 20, count: 8 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 2 }
+Elapsed time 5.083µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 8 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 2 }
+Time elapsed 239.875µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 28
+Greedy approach results:
+CoinStack { coin: 20, count: 1 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 3 }
+Elapsed time 4µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 1 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 3 }
+Time elapsed 31µs
+
+ Compare greedy vs dynamic coin solver for norwegian coins: [1, 5, 10, 20], and target sum 216
+Greedy approach results:
+CoinStack { coin: 20, count: 10 }
+CoinStack { coin: 10, count: 1 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 1 }
+Elapsed time 4.167µs
+
+Dynamic approach: 
+CoinStack { coin: 20, count: 10 }
+CoinStack { coin: 10, count: 1 }
+CoinStack { coin: 5, count: 1 }
+CoinStack { coin: 1, count: 1 }
+Time elapsed 244.666µs

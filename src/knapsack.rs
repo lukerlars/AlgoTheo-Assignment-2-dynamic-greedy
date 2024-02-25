@@ -1,27 +1,18 @@
-use rand::{Rng};
-
-pub fn run_discrete_knapsack(){
-let valuables = generate_knapsack_01();
-let potential_yields = solve_knapsack_01(&valuables, 14);
-for i in potential_yields{    
-    println!("{:?}",i);
-}
-
-}
+use rand::Rng;
 
 
 #[derive(Clone, Debug)]
 pub struct Knapsack{
-    size_left : i32,
-    items : Vec<i32>,
-    total_value : i32
+    pub size_left : i32,
+    pub items : Vec<i32>,
+    pub total_value : i32
 }
 
 #[derive(Debug, Clone, Copy)]
 pub struct ValuableItem {
-    id: i32,
-    size: i32,
-    value : i32
+    pub id: i32,
+    pub size: i32,
+    pub value : i32
 }
 
 
@@ -50,6 +41,7 @@ pub fn solve_knapsack_01(items : & [ValuableItem] , knapsack_size : i32 )-> Vec<
     let first_top = &potential_knapsacks[0];
     output.push(first_top.clone());
 
+    // In case we discover more than one top-scoring solutions
     for candidate in potential_knapsacks.iter().skip(1){
         if candidate.total_value == first_top.total_value{
             output.push(candidate.clone())
@@ -79,11 +71,10 @@ fn knapsack_recurse(items: &[ValuableItem], knapsacks: &mut Vec<Knapsack>, curre
 }
 
 
-
 #[derive(Debug)]
 pub struct ValuableLiquid{
-    volume : f32,
-    value : f32
+   pub volume : f32,
+    pub value : f32
 }
 
 pub fn generate_knapsack_frac() -> Vec<ValuableLiquid>{
@@ -115,23 +106,6 @@ pub fn solve_knapsack_frac(items : &mut Vec<ValuableLiquid> , knapsack_size : f3
         }
     }
     (cum_amount,cum_value)
-}
-
-pub fn run_frac_knapsack_demo(){
-    let mut valuables = vec![ValuableLiquid{volume : 5.0, value : 5.0},ValuableLiquid{volume : 4.0, value : 7.0},ValuableLiquid{volume :8.0 , value : 2.0}];
-    let knapsack_size = 6.0;
-    let (cum_amount, cum_value) = solve_knapsack_frac(&mut valuables, knapsack_size);
-    println!("{} {}", cum_amount, cum_value);
-    let mut some_problem = generate_knapsack_frac();
-    
-
-    for valubable in some_problem.iter(){
-        println!("{:?}",valubable);
-
-    }
-    let (some_amount, some_value) = solve_knapsack_frac(&mut some_problem, knapsack_size);
-    println!("size of yield {}, total value {}",some_amount, some_value);
-
 }
 
 
