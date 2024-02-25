@@ -38,14 +38,4 @@ pub fn matrix_chain_order(matrix_dimensions: &[i32]) -> (Vec<Vec<i32>>, Vec<Vec<
  }
 
 
- pub fn run_matchain_demo() {
-
-    let dimensions: Vec<i32> = vec![3,4,5,4,3,4];
-    let (res_m, res_s) = matrix_chain_order(&dimensions);
-    
-    print!("Min number of computations with optimal parenthesization: {}",res_m[0][4]);
-    print!("\n And that paranthesization is: ");
-    print_optimal_parens(&res_s, 0, 4);
-    }
-    
  
